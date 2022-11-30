@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.min.js"></script>
@@ -36,9 +36,9 @@ if (isset($_POST['submit'])) {
 <style>
     body{
         background-image: url('assets/images/background_login.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
     }
 </style>
 <body>
