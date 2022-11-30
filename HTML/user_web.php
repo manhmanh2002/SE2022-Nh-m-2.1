@@ -114,7 +114,7 @@
     </nav>
 
     <section class="home">
-        <div class="text">Dashboard Sidebar</div>
+        <div class="text">3D/AR Universe</div>
     </section>
 
     <script>
