@@ -14,7 +14,7 @@
     --primary-color: #0B294E;
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
-    --text-color: #707070;
+    --text-color: #3105e1;
 
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
@@ -289,6 +289,7 @@ body.dark .switch::before{
     height: 100vh;
     width: calc(100% - 250px);
     background-color: var(--body-color);
+    opacity: 0.3;
     transition: var(--tran-05);
 }
 .home .text{

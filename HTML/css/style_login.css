@@ -9,6 +9,10 @@
 }
 
 body {
+    background-image: url('./background_login.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -208,9 +212,6 @@ body {
     margin-top: 25px;
 }
 
-.container #flip {
-    display: none;
-}
 
 .forms .form-content .login-form .error-msg {
     margin: 10px 0;

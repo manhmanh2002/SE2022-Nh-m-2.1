@@ -10,7 +10,14 @@
 
     <!--<title>Dashboard Sidebar Menu</title>-->
 </head>
-
+<style>
+    body {
+    background-image: url('assets/images/background_login.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    }
+</style>
 <body>
     <nav class="sidebar close">
         <header>
