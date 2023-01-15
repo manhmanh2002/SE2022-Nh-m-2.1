@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
 :root{
+    --bule:#099ff5;
     --orange:#ff7800;
     --black:#130f40;
     --light-color:#666;
@@ -43,7 +45,7 @@ section{
 }
 
 .heading span{
-    background: var(--orange);
+    background: rgb(16, 30, 185);
     color:#fff;
     display: inline-block;
     padding:.5rem 3rem;
@@ -63,7 +65,7 @@ section{
 }
 
 .btn:hover{
-    background: var(--orange);
+    background: var(--bule);
     color:#fff;
 }
 
@@ -86,7 +88,7 @@ section{
 }
 
 .header .logo i{
-    color:var(--orange);
+    color: var(--bule);
 }
 
 .header .navbar a{
@@ -96,7 +98,7 @@ section{
 }
 
 .header .navbar a:hover{
-    color:var(--orange);
+    color:#099ff5;
 }
 
 .header .icons div{
@@ -113,7 +115,7 @@ section{
 }
 
 .header .icons div:hover{
-    background: var(--orange);
+    background: var(--bule);
     color:#fff;
 }
 
@@ -210,7 +212,7 @@ section{
 }
 
 .header .login-form p a{
-    color:var(--orange);
+    color:var(--bule);
     text-decoration: underline;
 }
 
@@ -220,7 +222,155 @@ section{
     background: none;
     border:none;
     cursor: pointer;
+
 }
+
+
+.products .product-slider{
+    padding:1rem;
+}
+
+.products .product-slider:first-child{
+    margin-bottom: 2rem;
+}
+
+.products .product-slider .box{
+    background: #fff;
+    border-radius: .5rem;
+    text-align: center;
+    padding:3rem 2rem;
+    outline-offset: -1rem;
+    outline: var(--outline);
+    box-shadow: var(--box-shadow);
+    transition: .2s linear;
+}
+
+.products .product-slider .box:hover{
+    outline-offset: 0rem;
+    outline: var(--outline-hover);
+}
+
+.products .product-slider .box img{
+    height:20rem;
+}
+
+.products .product-slider .box model-viewer{
+    height: 20rem;
+    width: 100%;
+}
+
+.products .product-slider .box h3{
+    font-size: 2.5rem;
+    color:var(--black);
+}
+
+.products .product-slider .box .price{
+    font-size: 2rem;
+    color:var(--light-color);
+    padding:.5rem 0;
+}
+
+.products .product-slider .box .stars i{
+    font-size: 1.7rem;
+    color:var(--bule);
+    padding:.5rem 0;
+}
+
+
+
+
+.footer{
+    background: #fff;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    color:var(--black);
+    padding:1rem 0;
+}
+
+.footer .box-container .box h3 i{
+    color:#099ff5;
+}
+
+.footer .box-container .box .links{
+    display: block;
+    font-size: 1.5rem;
+    color:var(--light-color);
+    padding:1rem 0;
+}
+
+.footer .box-container .box .links i{
+    color:var(--bule);
+    padding-right: .5rem;
+}
+
+.footer .box-container .box .links:hover i{
+    padding-right: 2rem;
+}
+
+.footer .box-container .box p{
+    line-height: 1.8;
+    font-size: 1.5rem;
+    color:var(--light-color);
+    padding:1rem 0;
+}
+
+.footer .box-container .box .share a{
+    height:4rem;
+    width:4rem;
+    line-height:4rem;
+    border-radius: .5rem;
+    font-size: 2rem;
+    color:var(--black);
+    margin-right: .2rem;
+    background: #eee;
+    text-align: center;
+}
+
+.footer .box-container .box .share a:hover{
+    background: var(--bule);
+    color: #fff;
+}
+
+.footer .box-container .box .email{
+    width: 100%;
+    margin:.7rem 0;
+    padding:1rem;
+    border-radius: .5rem;
+    background: #eee;
+    font-size: 1.6rem;
+    color:var(--black);
+    text-transform: none;
+}
+
+.footer .box-container .box .payment-img{
+    margin-top: 2rem;
+    height: 3rem;
+    display: block;
+}
+
+.footer .credit{
+    text-align: center;
+    margin-top: 2rem;
+    padding:1rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color:var(--black);
+    border-top: var(--border);
+}
+
+.footer .credit span{
+    color:var(--bule);
+}
+
+
 @media (max-width:991px){
 
     html{
@@ -230,6 +380,10 @@ section{
     .header{
         padding:2rem;
     }
+    section{
+        padding:2rem;
+    }
+
 
 }
 
@@ -270,5 +424,98 @@ section{
     html{
         font-size: 50%;
     }
+    .heading{
+        font-size: 2.5rem;
+    }
+
+    .footer{
+        text-align: center;
+    }
+
+    .footer .box-container .box .payment-img{
+        margin: 2rem auto;
+    }
 
 }
+
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../assets/images/Gold-and-Virtual-Reality-1024x614.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 20rem;
+    padding-bottom: 10rem;
+}
+
+.home .content{
+    text-align: center;
+    width:60rem;
+}
+
+.home .content h3{
+    color: var(--black);
+    font-size: 3rem;
+}
+
+.home .content h3 span{
+    color: rgb(9, 56, 211);
+}
+
+.home .content p{
+    color:var(--light-color);
+    font-size: 1.7rem;
+    padding:1rem 0;
+    line-height: 1.8;
+}
+
+.review .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap:1.5rem;
+}
+
+.review .box-container .box{
+    padding:3rem 2rem;
+    border-radius: .5rem;
+    background:#fff;
+    box-shadow: var(--box-shadow);
+    outline:var(--outline);
+    outline-offset: -1rem;
+    text-align: center;
+}
+
+.review .box-container .box:hover{
+    outline:var(--outline-hover);
+    outline-offset: 0rem;
+}
+
+.review .box-container .box img{
+    margin:1rem 0;
+    height:10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+
+.review .box-container .box h3{
+   font-size: 2rem;
+   color:var(--black);
+   line-height: 1.8;
+}
+
+.review .box-container .box p{
+    font-size: 1.7rem;
+    color:var(--light-color);
+    line-height: 1.8;
+    padding:1rem 0;
+}
+
+.review .box-container .box .stars i{
+    color: var(--bule);
+    font-size: 1.7rem;
+}
+
+
+
