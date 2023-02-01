@@ -524,4 +524,62 @@ section{
 }
 
 
+/*test  */
+.header .view2{
+    position: absolute;
+    top:110%; right:-110%;
+    padding:1rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width:35rem;
+    background: #fff;
+}
+
+.header .view2.active{
+    right:2rem;
+    transition: .4s linear;
+}
+
+.header .view2 .box{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    position: relative;
+    margin:1rem 0;
+}
+
+.header .view2 .box model-viewer{
+    width: 100rem;
+    height: 60rem;
+}
+
+
+.header .view1{
+    position: absolute;
+    top:110%; right:-110%;
+    padding:1rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width:35rem;
+    background: #fff;
+}
+
+.header .view1.active{
+    right:2rem;
+    transition: .4s linear;
+}
+
+.header .view1 .box{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    position: relative;
+    margin:1rem 0;
+}
+
+.header .view1 .box model-viewer{
+    width: 100rem;
+    height: 60rem;
+}
+/* end test */
 
