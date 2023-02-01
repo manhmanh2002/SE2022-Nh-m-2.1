@@ -92,20 +92,30 @@
     <div class="swiper product-slider">
 
         <div class="swiper-wrapper">
-
-            <div class="swiper-slide box">
-                <model-viewer src="assets/login/Drossel.gltf" alt="model robot" auto-rotate camera-controls ar ios-src="assets/login/Drossel.gltf"></model-viewer>
-                <h3>Drossel</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <a href="#view1" class="btn">view</a>
-            </div>
-
+            <?php
+            if(isset($_FILES['file'])){
+                $name = $_POST['text'];
+                $file_name = $_FILES['file']['name'];
+                $tmp_name = $_FILES['file']['tmp_name'];
+                $location = "assets/modelviewer/";
+                $upload = move_uploaded_file($tmp_name,$location.$file_name);
+                echo '<div class="swiper-slide box"> 
+                    <model-viewer src="'.$location.$file_name.'" alt="model robot" auto-rotate camera-controls ar ios-src="assets/login/Drossel.gltf"></model-viewer>
+                    <h3>'.$name.'</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#view1" class="btn">view</a>
+                    </div>';
+               
+            }
+            
+                
+            ?>
             <div class="swiper-slide box">
                 <!-- <img src="assets/images/cart-img-2.png" alt=""> -->
                 <model-viewer src="assets/modelviewer/NeilArmstrong.glb" alt="model robot" auto-rotate camera-controls ar ios-src="assets/modelviewer/NeilArmstrong.glb"></model-viewer>
@@ -148,24 +158,7 @@
                 <a href="#" class="btn">view</a>
             </div>
 
-            <div class="swiper-slide box">
-                <!-- <img src="assets/images/cart-img-2.png" alt=""> -->
-                <model-viewer src="assets/modelviewer/Helicopter.fbx" alt="model robot" auto-rotate camera-controls ar ios-src="assets/modelviewer/Helicopter.fbx"></model-viewer>
-                <h3>Helicopter</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <a href="#" class="btn">view</a>
-            </div>
-
         </div>
-
-        
-
     </div>
 
 </section>
@@ -174,7 +167,15 @@
 <!-- user edit section start -->
 <section class="edit" id="edit">
     <h1 class="heading"> user <span>edit</span> </h1>
+    <div class="box">
+        <form enctype="multipart/form-data" method="post">
+            <input type="file" name="file" id="file">
+            <input type="text" name="text" placeholder="Enter file name" required>
+            <input type="submit" value="upload">
+        </form>
+    </div>
 </section>
+
 <!-- user edit section end -->
 
 <!-- review section starts  -->
