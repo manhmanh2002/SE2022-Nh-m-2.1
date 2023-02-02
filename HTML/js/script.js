@@ -2,25 +2,35 @@ let searchForm = document.querySelector('.search-form');
 
 document.querySelector('#search-btn').onclick = () =>{
     searchForm.classList.toggle('active');
-    shoppingCart.classList.remove('active');
     loginForm.classList.remove('active');
     navbar.classList.remove('active');
 }
 
-let shoppingCart = document.querySelector('.shopping-cart');
+let view1 = document.querySelector('.view1');
 
-document.querySelector('#cart-btn').onclick = () =>{
-    shoppingCart.classList.toggle('active');
-    searchForm.classList.remove('active');
-    loginForm.classList.remove('active');
-    navbar.classList.remove('active');
+document.querySelector('#viewshow1').onclick = () =>{
+    view1.classList.toggle('active');
+    view2.classList.remove('active');
 }
+let view2 = document.querySelector('.view2');
+
+document.querySelector('#viewshow2').onclick = () =>{
+    view2.classList.toggle('active');
+    view1.classList.remove('active');
+}
+// let view3 = document.querySelector('.view3');
+
+// document.querySelector('#viewshow2').onclick = () =>{
+//     view2.classList.remove('active');
+//     view1.classList.remove('active');
+// }
+
+
 let loginForm = document.querySelector('.login-form');
 
 document.querySelector('#login-btn').onclick = () =>{
     loginForm.classList.toggle('active');
     searchForm.classList.remove('active');
-    shoppingCart.classList.remove('active');
     navbar.classList.remove('active');
 }
 
@@ -30,16 +40,17 @@ let navbar = document.querySelector('.navbar');
 document.querySelector('#menu-btn').onclick = () =>{
     navbar.classList.toggle('active');
     searchForm.classList.remove('active');
-    shoppingCart.classList.remove('active');
     loginForm.classList.remove('active');
 }
 
 window.onscroll = () =>{
     searchForm.classList.remove('active');
-    shoppingCart.classList.remove('active');
     loginForm.classList.remove('active');
     navbar.classList.remove('active');
+    view1.classList.remove('active');
+    view2.classList.remove('active');
 }
+
 var swiper = new Swiper(".product-slider", {
     loop:true,
     spaceBetween: 20,
@@ -60,51 +71,3 @@ var swiper = new Swiper(".product-slider", {
       },
     },
 });
-
-const dropArea = document.querySelector('.drag-area');
-const dragText = dropArea.querySelector('header');
-const button = dropArea.querySelector('button');
-const input = dropArea.querySelector('input');
-
-button.addEventListener('click', ()=>{
-  input.click();
-})
-
-input.addEventListener('change', function (){
-  const file = this.files[0];
-  showFile(file);
-})
-
-dropArea.addEventListener('dragover', (event)=>{
-  event.preventDefault();
-  dragText.textContent = "Thả để Tải Ảnh lên"
-})
-
-
-dropArea.addEventListener('dragleave', (event)=>{
-  event.preventDefault();
-  dragText.textContent = "Kéo và Thả để Tải Ảnh lên"
-})
-
-dropArea.addEventListener('drop', (event)=>{
-  event.preventDefault();
-  const file = event.dataTransfer.files[0];
-  showFile(file)
-})
-
-function showFile(file){
-  const fileType = file.type;
-  const validExtensions = ['image/glb', 'image/gltf'];
-  if(validExtensions.includes(fileType)){
-    const fileReader = new FileReader();
-    fileReader.onload = () => {
-      const fileUrl = fileReader.result;
-      const imgTag = `<img src="${fileUrl}">`;
-      dropArea.innerHTML = imgTag
-    }
-    fileReader.readAsDataURL(file);
-  } else {
-    alert("Error file");
-    dragText.textContent = "Kéo và Thả để tải file lên"
-  }
-}
