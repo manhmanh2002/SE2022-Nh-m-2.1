@@ -560,11 +560,15 @@ section{
     border-radius: .5rem;
     border: var(--border);
     font-size: 1.6rem;
-    color:var(--black);
     margin:1rem 0;
 }
 
 .edit .box input:hover{
     border: var(--border-hover);
     color: var(--bule);
+}
+
+.edit .box input .btn:hover{
+    background: var(--bule);
+    color: #fff;
 }

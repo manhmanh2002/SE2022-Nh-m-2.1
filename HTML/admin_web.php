@@ -136,7 +136,7 @@
             <form enctype="multipart/form-data" method="post">
                 <input type="file" name="file" id="file">
                 <input type="text" name="text" placeholder="Enter file name" required>
-                <input type="submit" value="upload">
+                <input type="submit" value="upload" class="btn">
             </form>
         </div>
     </section>
