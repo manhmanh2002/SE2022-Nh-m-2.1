@@ -16,6 +16,13 @@
 
 
 </head>
+    <?php
+        @include 'config.php';
+        session_start();
+        $select = 'select * from datalink where id = ' .$_GET['id'];
+        $result = mysqli_query(mysqli_connect('localhost','root','','nhom2_1'), $select);
+        $product = mysqli_fetch_assoc($result);
+    ?>
 <body>
     <!-- header section start -->
     <header class="header">
@@ -27,7 +34,7 @@
     <section class="view">
         <div class="box">
             <!-- chèn mô hình 3d  start-->
-            <model-viewer src="assets/modelviewer/Drossel.glb" alt="model robot" auto-rotate camera-controls ar></model-viewer>
+            <model-viewer src="<?=$product['link'] ?>" alt="model robot" auto-rotate camera-controls ar ios-src="<?=$product['link'] ?>"></model-viewer>
             <!-- chèn mô hình 3d end -->
             <h3>NeilArmstrong</h3>
             <div class="stars">
