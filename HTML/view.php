@@ -51,7 +51,7 @@ $product = mysqli_fetch_assoc($result);
 
         </div>
         <div class="content">
-            <h3>NeilArmstrong</h3>
+            <h3><?= $product['name'] ?></h3>
             <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
