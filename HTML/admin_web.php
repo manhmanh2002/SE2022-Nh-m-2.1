@@ -28,14 +28,36 @@
         header('location: user_web.php');
     }
     if (isset($_FILES['file'])) {
+        $errors = [];
         $name = $_POST['text'];
         $file_name = $_FILES['file']['name'];
         $tmp_name = $_FILES['file']['tmp_name'];
         $location = "assets/modelviewer/";
-        $upload = move_uploaded_file($tmp_name, $location . $file_name);
-        $insert_data = "INSERT INTO `datalink` (`id`, `name`, `link`) VALUES
-            (' ','$name', '$location$file_name')";
-        mysqli_query($conn, $insert_data);
+        if ($_FILES["file"]["size"] > 30000000) {
+            $errors[] = "File exceeds maximum size (30MB)";
+        }
+          
+        // Allow certain file formats
+        if($imageFileType != "glb") {
+            $errors[] = "Sorry, only GLB files are allowed.";
+            $uploadOk = 0;
+        }
+        if(empty($errors)){
+            $upload = move_uploaded_file($tmp_name, $location . $file_name);
+            $insert_data = "INSERT INTO `datalink` (`id`, `name`, `link`) VALUES
+                (' ','$name', '$location$file_name')";
+            mysqli_query($conn, $insert_data);
+            if ($upload) {
+                echo "The file has been uploaded";
+            } else {
+               echo "An error occurred. Please contact the administrator.";
+            }
+        } else {
+            foreach ($errors as $error) {
+                echo $error . "These are the errors" . "\n";
+            }
+        }
+        
     }
     ?>
     <!-- header section starts  -->

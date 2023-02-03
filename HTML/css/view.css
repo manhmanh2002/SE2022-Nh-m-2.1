@@ -95,7 +95,7 @@ section {
 
 model-viewer {
     display: grid;
-    height: 500px;
+    height: 460px;
     width: auto;
     align-content: center;
 }
@@ -213,17 +213,28 @@ model-viewer>#ar-prompt>img {
 
 .view .close {
     position: relative;
-    left: 95%;
+    left: auto;
     display: flex;
     font-size: 2rem;
     font-weight: bolder;
     color: var(--black);
 }
 
-.view .close i {
+.view .close .btn {
     color: black;
 }
+.view .btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border:.2rem solid var(--black);
+    color:var(--black);
+    cursor: pointer;
+    background: none;
+}
 
-.view .close i:hover {
+.view .close .btn:hover {
     color: var(--bule);
 }

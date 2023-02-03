@@ -59,10 +59,11 @@ $product = mysqli_fetch_assoc($result);
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
+            <div class="close">
+            <a href="javascript:history.back()" class="btn">back</a>
+            </div>
         </div>
-        <div class="close">
-            <a href="javascript:history.back()"><i class="fas fa-arrow-right"></i></a>
-        </div>
+        
     </section>
     <!-- section 3d view end -->
     <script src="view_script.js"></script>
