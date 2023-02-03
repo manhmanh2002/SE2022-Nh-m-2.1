@@ -41,7 +41,7 @@
     <!-- header section starts  -->
 
     <header class="header">
-        <a href="#" class="logo"> <i class="fas fa-shopping-basket"></i> model-viewer </a>
+        <a href="#" class="logo"> <i class=" fas fa-solid fa-vr-cardboard"></i> model-viewer </a>
 
         <nav class="navbar">
             <a href="#home">home</a>
@@ -53,7 +53,6 @@
         <div class="icons">
             <div class="fas fa-bars" id="menu-btn"></div>
             <div class="fas fa-search" id="search-btn"></div>
-            <div class="fas fa-shopping-cart" id="cart-btn"></div>
             <div class="fas fa-user" id="login-btn"></div>
 
         </div>
@@ -70,7 +69,7 @@
         <form action="" class="login-form" method="POST">
             <h3>profile</h3>
             <div class="box">
-                <img src="assets/images/W.png" alt="" class="box">
+                <img src="assets/images/AI1.jpg" alt="" class="box">
                 <h4>admin</h4>
             </div>
 

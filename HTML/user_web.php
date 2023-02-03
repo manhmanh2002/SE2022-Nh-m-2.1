@@ -31,7 +31,7 @@
     <!-- header section starts  -->
 
     <header class="header">
-        <a href="#" class="logo"> <i class="fas fa-shopping-basket"></i> model-viewer </a>
+        <a href="#" class="logo"> <i class=" fas fa-solid fa-vr-cardboard"></i> model-viewer </a>
 
         <nav class="navbar">
             <a href="#home">home</a>
@@ -54,8 +54,8 @@
         <form action="" class="login-form" method="POST">
             <h3>profile</h3>
             <div class="box">
-                <img src="assets/images/W.png" alt="" class="box">
-                <h4>admin</h4>
+                <img src="assets/images/user.png" alt="" class="box">
+                <h4>User</h4>
             </div>
 
             <p>Group: SE2022-NHOM-2.1</p>
