@@ -1,5 +1,5 @@
 <?php
 
-$conn = mysqli_connect('localhost','root','','login_data');
+$conn = mysqli_connect('localhost','root','','nhom2_1');
 
 ?>

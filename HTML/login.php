@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
                         <span class="text-1">Welcome to <br> 3D/AR UNIVERSE</span>
                         <span class="text-2">Let's go</span>
                         <br>
-                        <model-viewer src="assets/login/Drossel.gltf" class="model-robot" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1" autoplay>
+                        <model-viewer src="assets/login/Drossel.glb" class="model-robot" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1" autoplay>
                         </model-viewer>
                     </div>
 

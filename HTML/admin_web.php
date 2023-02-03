@@ -3,7 +3,7 @@
     session_start();
     if (isset($_POST['submit'])) {
         session_destroy();
-        header('location: login.php');
+        header('location: user_web.php');
     }
     if(isset($_FILES['file'])){
         $name = $_POST['text'];
