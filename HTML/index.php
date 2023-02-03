@@ -1,9 +1,35 @@
 <?php
-    // session_start();
-    if (isset($_POST['submit'])) {
-        session_destroy();
-        header('location: login.php');
+
+@include 'config.php';
+session_start();
+if(isset($_FILES['file'])){
+   $name = $_POST['text'];
+   $file_name = $_FILES['file']['name'];
+   $tmp_name = $_FILES['file']['tmp_name'];
+   $location = "assets/modelviewer/";
+   $upload = move_uploaded_file($tmp_name,$location.$file_name);
+   $insert_data = "INSERT INTO `datalink` (`id`, `name`, `link`) VALUES
+   (' ','$name', '$location$file_name')";
+   mysqli_query($conn, $insert_data);
+} 
+function Product($link, $name)
+{   $product = mysqli_query(mysqli_connect('localhost','root','','login_data'),"select * from `datalink` order by `id`");
+    while($row = mysqli_fetch_array($product)){
+    echo '<div class="swiper-slide box"> 
+        <model-viewer src="' . $link . '" alt="model robot" auto-rotate camera-controls ar ios-src="assets/login/Drossel.gltf"></model-viewer>
+        <h3>' . $name . '</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </div>
+        <a href="#view1?id='. $row["id"].'" class="btn">view</a>
+        </div>';
     }
+}
+
 ?>
 
 
@@ -29,7 +55,14 @@
 <body>
 
 <!-- header section starts  -->
-
+<?php
+    if(isset($_GET['id'])){
+        $select = 'select * from datalink where id = ' .$_GET['id'];
+        $result = mysqli_query(mysqli_connect('localhost','root','','login_data'), $select);
+        $product = mysqli_fetch_assoc($result);
+    }
+    
+?>
 <header class="header">
     <a href="#" class="logo"> <i class="fas fa-shopping-basket"></i> model-viewer </a>
     
@@ -39,6 +72,11 @@
         <a href="#edit"> user edit</a>
         <a href="#review">review</a>
     </nav>
+    <div class="view1">
+            <div class="view">
+            <model-viewer src="<?=$product['link'] ?>" alt="model robot" auto-rotate camera-controls ar></model-viewer>
+            </div>
+        </div>
 
     <div class="icons">
         <div class="fas fa-bars" id="menu-btn"></div>
@@ -91,72 +129,16 @@
 
     <div class="swiper product-slider">
 
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper" >
             <?php
-            if(isset($_FILES['file'])){
-                $name = $_POST['text'];
-                $file_name = $_FILES['file']['name'];
-                $tmp_name = $_FILES['file']['tmp_name'];
-                $location = "assets/modelviewer/";
-                $upload = move_uploaded_file($tmp_name,$location.$file_name);
-                echo '<div class="swiper-slide box"> 
-                    <model-viewer src="'.$location.$file_name.'" alt="model robot" auto-rotate camera-controls ar ios-src="assets/login/Drossel.gltf"></model-viewer>
-                    <h3>'.$name.'</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <a href="#view1" class="btn">view</a>
-                    </div>';
-               
+            $select = " select name, link from datalink ";
+            $result = mysqli_query($conn, $select);
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                Product($row["link"],$row["name"]);
+                }
             }
-            
-                
             ?>
-            <div class="swiper-slide box">
-                <!-- <img src="assets/images/cart-img-2.png" alt=""> -->
-                <model-viewer src="assets/modelviewer/NeilArmstrong.glb" alt="model robot" auto-rotate camera-controls ar ios-src="assets/modelviewer/NeilArmstrong.glb"></model-viewer>
-                <h3>NeilArmstrong</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <a href="#" class="btn">view</a>
-            </div>
-
-            <div class="swiper-slide box">
-                <!-- <img src="assets/images/cart-img-2.png" alt=""> -->
-                <model-viewer src="assets/modelviewer/RobotExpressive.glb" alt="model robot" auto-rotate camera-controls ar ios-src="assets/modelviewer/RobotExpressive.glb"></model-viewer>
-                <h3>RobotExpressive</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <a href="#" class="btn">view</a>
-            </div>
-
-            <div class="swiper-slide box">
-                <!-- <img src="assets/images/cart-img-2.png" alt=""> -->
-                <model-viewer src="assets/modelviewer/helicopter_v2.glb" alt="model robot" auto-rotate camera-controls ar ios-src="assets/modelviewer/helicopter_v2.glb"></model-viewer>
-                <h3>Helicopter</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <a href="#" class="btn">view</a>
-            </div>
 
         </div>
     </div>

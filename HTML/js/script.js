@@ -6,25 +6,6 @@ document.querySelector('#search-btn').onclick = () =>{
     navbar.classList.remove('active');
 }
 
-let view1 = document.querySelector('.view1');
-
-document.querySelector('#viewshow1').onclick = () =>{
-    view1.classList.toggle('active');
-    view2.classList.remove('active');
-}
-let view2 = document.querySelector('.view2');
-
-document.querySelector('#viewshow2').onclick = () =>{
-    view2.classList.toggle('active');
-    view1.classList.remove('active');
-}
-// let view3 = document.querySelector('.view3');
-
-// document.querySelector('#viewshow2').onclick = () =>{
-//     view2.classList.remove('active');
-//     view1.classList.remove('active');
-// }
-
 
 let loginForm = document.querySelector('.login-form');
 
@@ -46,9 +27,7 @@ document.querySelector('#menu-btn').onclick = () =>{
 window.onscroll = () =>{
     searchForm.classList.remove('active');
     loginForm.classList.remove('active');
-    navbar.classList.remove('active');
-    view1.classList.remove('active');
-    view2.classList.remove('active');
+    navbar.classList.remove('active');;
 }
 
 var swiper = new Swiper(".product-slider", {
