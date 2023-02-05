@@ -81,7 +81,7 @@ Nhập tài khoản và mật khẩu rồi tận hưởng ^^
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-###ễmm các model
+### Xem các model
 Dưới mỗi model sẽ có nút view. Click vào đó để xem các model.
 
 ![anh_hd2]
