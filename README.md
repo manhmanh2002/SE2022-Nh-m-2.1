@@ -11,27 +11,44 @@
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Table of Contents</summary>
+  <summary>Các nội dung chính</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#Về-dự-án">Về dự án</a>
     </li>
     <li>
       <a href="#Các-tính-năng-cơ-bản">Các tính năng cơ bản</a>
       <ul>
-        <li><a href="#Tính-năng-1">Tính năng 1</a></li>
-        <li><a href="#Tính-năng-2">Tính năng 2</a></li>
-        <li><a href="#Tính-năng-3">Tính năng 3</a></li>
-        <li><a href="#Tính-năng-4">Tính năng 4</a></li>
+        <li><a href="#đăng-nhập-vào-web">Đăng nhập vào web</a></li>
+        <li><a href="#xem-các-model">Xem các model</a></li>
+        <li><a href="#upload-các-model">Upload các model</a></li>
+        <!-- li><a href="#Tính-năng-4">Tính năng 4</a></li -->
       </ul>
     </li>
+    <li>
+      <a href="#tìm-hiểu-3dar">Tìm hiểu 3D/AR</a>
+      <ul>
+        <li><a href="#một-vài-khái-niệm-về-3d">Một vài khái niệm về 3D</a></li>
+        <li><a href="#các-thư-viện-và-nền-tảng-hỗ-trợ-trình-diễn-3dar">Các thư viện và nền tảng hỗ trợ trình diễn 3D/AR</a></li>
+        <li><a href="#về-thư-viện-google-model-viewer">Về thư viện Google Model-Viewer</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#một-vài-tìm-hiểu-về-công-nghệ-web">Một vài tìm hiểu về công nghệ web</a>
+      <ul>
+        <li><a href="#về-lập-trình-web">Về lập trình web</a></li>
+        <li><a href="#về-database-mysql">Về database mysql</a></li>
+        <li><a href="#các-thư-viện-và-nền-tảng-hỗ-trợ-trình-diễn-3dar">Các thư viện và nền tảng hỗ trợ trình diễn 3D/AR</a></li>
+        <li><a href="#thư-viện-google-model-viewer">Thư viện Google Model-Viewer</a></li>
+      </ul>
+    </li> 
   </ol>
 </details>
 
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## Về dự án
 
 ![Product Name Screen Shot][product-screenshot]
 
@@ -41,72 +58,119 @@ SE2022-Nhom-2.1
 
 Các thành viên gồm: <br>
 -Đồng Đức Anh <br>
--Nguyen Duc Chinh <br>
--Lam Son Dat <br>
--Tran Tien Hao
-
+-Nguyễn Đức Chính <br>
+-Lâm Sơn Đạt <br>
+-Trần Tiến Hảo
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## _Thông tin cơ bản về 3D/AR_
- AR ( viết tắt: Augmented Reality, tạm dịch: thực tế ảo tăng cường) là công nghệ mới được tăng cường từ công nghệ VR. Công nghệ này có khả năng xóa bỏ ranh giới thực và mô hình 3D ảo. Nghĩa là người dùng sẽ được trải nghiệm mô hình ảo trong không gian ảo trong không gian thực tế thông qua smartphone hoặc máy tính.
-
-Những thành phần ảo của công nghệ AR được tạo ra từ máy tính và tái hiện lại ngay trong không gian bạn đang ở. Không chỉ xuất hiện ở môi trường thực, chúng còn được bổ trợ thêm âm thanh, video, đồ họa,.. Tính năng này mang đến cho người dùng một trải nghiệm chân thật và sinh động nhất. Bạn hoàn toàn có thể tương tác với các mô hình ảo qua điện thoại.
-
-Đặc điểm
-* Không cần hỗ trợ thiết bị khi hoạt động.
-* Thông qua điện thoại di động để thực hiện các hoạt động
-* AR được sử dụng trong không gian linh hoạt. Nó không cần nhiều khoảng trống để thực hiện.
-* Nó không cần các phần cứng chuyên dụng của VR như kính...
-* Người dùng có khả năng tương tác được với thế giới thật bên ngoài.
-
-## _Xu hướng phát triển và xây dựng hệ thống trình diễn 3D/AR_
-
-Cùng với công nghệ thực tế ảo VR, công nghệ thực tế ảo tăng cường AR cũng đang ngày càng phát triển và được ứng dụng trong nhiều lĩnh vực như giải trí, công nghiệp, ... Xu hướng thực tế ảo tăng cường trong thời gian tới được mở rộng mạnh mẽ hơn và có khả năng tạo ra hình ảnh chất lượng hơn.
-
-Thực tế ảo tăng cường bắt đầu vào năm 1968 bởi Sutherland, người đã sử dụng nó trong việc xây dựng các hệ thống hiển thị gắn trên đầu. Khi thực tế ảo được quan tâm, nó đã nhanh chóng được sử dụng trong nhiều lĩnh vực ngành nghề kinh doanh, hậu cần, chơi game, sản xuất, nghành nghề bán lẻ,... Thực tế ảo tăng cường AR là một hoạt động có thể dễ dàng tăng cường sự phát triển của bất kì doanh nghiệp nào bằng lớp phủ trực quan của nó.
-
-Ngày nay, thực tế ảo tăng cường đã được áp dụng sâu rộng hơn trong cả ngành kiến trúc.
-
-Xu hướng phát triển:
-* Mối quan hệ chặt chẽ giữa thực tế ảo tăng cường AR và trí tuệ nhân tạo AI: Trí tuệ nhân tạo là một phần cần thiết cho các hoạt động của thực tế ảo tăng cường. Với thực tế ảo tăng cường AR sẽ cho phép đối tượng được gắn nhãn và xác định trong quan điểm trực quan của người xem. Nhiều ứng dụng truyền thông xã hội ngày nay cũng đang được phát triển cùng với sự kết hợp giữa AR với AI. Ví dụ mạng xã hội Instagram hay snapchat được trang bị nhiều nhãn dán khác nhau như hình con chó, tai thỏ,... nhằm mang đến cho người dùng những trải nghiệm thú vị hơn.
-* Thực tế ảo tăng cường về mặt giảng dạy và đào tạo: điều này đồng nghĩa với việc bất kì thông tin hoặc dữ liệu nào cũng có thể được truyền cho người học trong thời gian thực về các mục tiêu, mối nguy hiểm hoặc thực tiễn tốt nhất.
-* Kết nối thực tế ảo tăng cường AR với thực tế ảo VR: Cả 2 thực tế ảo VR và thực tế ảo tăng cường AR đóng góp một vị trí không hề nhỏ trong việc phát triển hội nghị trực tuyến, nơi mà người dùng có thể nhìn thấy và tương tác nhau. Những cuộc hội thoại này có thể nhiều hơn 2 người tham gia cùng một lúc.
-* Xu hướng AR trong ngành công nghiệp ô tô: Hầu hết những công ty ô tô hiện nay đang làm việc trong đồ họa màn hình gắn trên bảng điều khiển từ xung quanh một chiếc xe với sự trợ giúp của các cảnh quay camera. Công nghệ này có khả năng làm giảm sự xuất hiện của các vụ tai nạn do nó có khả năng cảnh báo các mối nguy hiểm cùng với việc xác định các địa điểm, dốc mốc trên đường đi. Công nghệ hực tế ảo tăng cường cũng có khả năng thực hiện các tuyến đường trong việc bảo vệ dữ liệu AR trên kính chắn gió của ô tô. Cùng với sự trợ giúp của công nghệ thức tế ảo tăng cường, chúng ta có thể trải nghiệm việc xác định các làn đường được sử dụng thường xuyên, nhắc nhở điều hướng, phát hiện mối nguy hiểm hay là thông tin về hướng đi đúng,..
-* Mobile AR: là nút thắt của xu hướng
-
-
 
 <!-- Các tính năng cơ bản của web -->
 ## Các tính năng cơ bản
 
+### Đăng nhập vào web
+Click vào biểu tượng hình người, xong đó Click vào login
 
+![anh_hd1]
 
-### Tính năng 1
-....
+Sẽ xuất hiện trang để đăng nhập
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+![anh_login]
 
-
-### Tính năng 2
-....
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-### Tính năng 3
-....
+Nhập tài khoản và mật khẩu rồi tận hưởng ^^
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+###ễmm các model
+Dưới mỗi model sẽ có nút view. Click vào đó để xem các model.
+
+![anh_hd2]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+### Upload các model
+Lưu ý: Chỉ làm được sau khi đăng nhập
+
+![anh_hd3]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!--
 ### Tính năng 4
 ....
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p -->
+
+<!--Tìm-hiểu-->
+## Tìm hiểu 3D/AR
+
+![ve3d]
+
+AR ( viết tắt: Augmented Reality, tạm dịch: thực tế ảo tăng cường) là công nghệ mới được tăng cường từ công nghệ VR. Công nghệ này có khả năng xóa bỏ ranh giới thực và mô hình 3D ảo. Nghĩa là người dùng sẽ được trải nghiệm mô hình ảo trong không gian ảo trong không gian thực tế thông qua smartphone hoặc máy tính.
+
+Những thành phần ảo của công nghệ AR được tạo ra từ máy tính và tái hiện lại ngay trong không gian bạn đang ở. Không chỉ xuất hiện ở môi trường thực, chúng còn được bổ trợ thêm âm thanh, video, đồ họa,.. Tính năng này mang đến cho người dùng một trải nghiệm chân thật và sinh động nhất. Bạn hoàn toàn có thể tương tác với các mô hình ảo qua điện thoại.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Một vài khái niệm về 3D
+- Mô hình hóa: bao gồm mô hình hóa đa giác và ‘điêu khắc’ (hiểu nôm na là đều biến các đa giác thành các hình hài mình mong muốn, tạo ra các model)
+- Texturing: có thể hiểu như tô tượng vậy.
+- Shading: cho biết chi tiết đó được làm từ vật liệu nào. 
+- Rigging: xây dựng một bộ khung xương bên trong mô hình.
+- Animation: tạo ra các chuyện động cho mô hình.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Các thư viện và nền tảng hỗ trợ trình diễn 3D/AR
+- Vectary
+- Maya
+- 3ds Max
+- Cinema 4D
+- Softmage
+- Blender
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Một vài tìm hiểu về công nghệ web
+
+### Về lập trình web
+- WWW – World Wide Web(WWW, thường được gọi tắt là Web) là một trong những dịch vụ được dùng rất phổ biến trên Internet. Được xây dựng chủ yếu trên nền văn bản, đồ họa và các hiệu ứng tương tác, Web ngày càng được sử dụng phổ biến và giờ đây đã là một phần quen thuộc của cuộc sống.
+- HTTP - HyperText Transfer Protocol: giao thức chuyển giao siêu văn bản trên Web, được xem như là một ngôn ngữ “nói chuyện” giữa Web clients và Web servers.
+- URL - Uniform Resource Locator: Khái niệm này ra đời cùng lúc với Internet, vấn đề đặt ra lúc đó là cách thức qui định đặt tên địa chỉ như thế nào nhằm mục đích để giúp cho người dùng dễ dàng truy cập đến nguồn tài nguyên trên Web. 
+- HTML - (HyperText Markup Language – Ngôn ngữ đánh dấu siêu văn bản) là ngôn ngữ dùng để tạo trang web, có chức năng giúp người dùng xây dựng và cấu trúc các phần
+trong trang web hoặc ứng dụng, thường được sử dụng trong phân chia các đoạn văn, heading, link, blockquotes,...
+- CSS - Cascading Style Sheets: là một ngôn ngữ được sử dụng để tìm và định dạng lại các phần tử được tạo ra bởi HTML. CSS là ngôn ngữ tạo phong cách cho trang web.
+- JavaScript là ngôn ngữ lập trình website phổ biến hiện nay, nó được tích hợp và nhúng vào HTML giúp website trở nên sống động hơn.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Về Database MySQL
+MySQL hiện là phần mềm hệ thống quản lý cơ sở dữ liệu phổ biến nhất được sử dụng để quản lý cơ sở dữ liệu quan hệ. Đây là phần mềm cơ sở dữ liệu nguồn mở, được hỗ trợ bởi Công ty Oracle. Đây là hệ thống quản lý cơ sở dữ liệu nhanh, có thể mở rộng và dễ sử dụng so với Microsoft SQL Server và Cơ sở dữ liệu Oracle.
+
+Ưu điểm:
+• Dễ sử dụng
+• Độ bảo mật cao
+• Đa tính năng
+• Khả năng mở rộng và mạnh mẽ
+• Nhanh chóng
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Thư viện Google Model-Viewer
+![ggmodel]
+
+Model-viewer là một công cụ giúp hiển thị các mô hình 3D một cách dễ dàng, tương thích trên nhiều trình duyệt và thiết bị.
+
+
+
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [product-screenshot]: IMG_of_README/screenshot.png
-
+[ve3d]: IMG_of_README/about-3d.jpg
+[ggmodel]: IMG_of_README/ggmodel.png
+[anh_hd1]: IMG_of_README/anh_hd1.png
+[anh_login]: IMG_of_README/anh_login.png
+[anh_hd2]: IMG_of_README/anh_hd2.png
+[anh_hd3]: IMG_of_README/anh_hd3.png
